@@ -1,0 +1,23 @@
+# ModelSim / Questa
+work/
+transcript
+*.wlf
+*.vcd
+*.vstf
+modelsim.ini
+
+# Vivado
+.Xil/
+*.jou
+*.log
+*.str
+*.cache/
+*.runs/
+*.hw/
+*.sim/
+*.ip_user_files/
+*.gen/
+
+# OS
+.DS_Store
+Thumbs.db
