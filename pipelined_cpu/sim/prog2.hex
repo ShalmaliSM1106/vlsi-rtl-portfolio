@@ -1,0 +1,11 @@
+// Program 2: back-to-back dependencies (stall) and distance-2 dependency (WB bypass)
+6405  // 0: ADDI R2,R0,5
+6607  // 1: ADDI R3,R0,7
+6A02  // 2: ADDI R5,R0,2
+1298  // 3: ADD  R1,R2,R3     R1 = 12
+2868  // 4: SUB  R4,R1,R5     R4 = 10  (depends on instr 3 -> stall)
+1D20  // 5: ADD  R6,R4,R4     R6 = 20  (depends on instr 4 -> stall)
+6603  // 6: ADDI R3,R0,3      R3 = 3
+6404  // 7: ADDI R2,R0,4      R2 = 4
+1ED8  // 8: ADD  R7,R3,R3     R7 = 6   (R3 is in WB -> write-through, no stall)
+F000  // 9: HALT
