@@ -1,7 +1,0 @@
-// Program 1: sum 1..10 into R1 (counts R2 down from 10 to 0)
-640A  // 0: ADDI R2,R0,10
-1250  // 1: ADD  R1,R1,R2     <- loop
-64BF  // 2: ADDI R2,R2,-1
-9401  // 3: BEQ  R2,R0,+1     (taken -> 5)
-A001  // 4: JMP  1
-F000  // 5: HALT
